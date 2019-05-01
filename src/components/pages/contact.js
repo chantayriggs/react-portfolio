@@ -1,5 +1,5 @@
 import React from "react"
-import image from "../../../static/assets/images/bio.jpg"
+import image from "../../../static/assets/images/desert.jpg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 export default function() {
     return(

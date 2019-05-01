@@ -1,5 +1,5 @@
 import React from "react"
-import image from "../../../static/assets/images/pfp.jpg"
+import image from "../../../static/assets/images/Earth.jpg"
 
 export default function() {
     return(
