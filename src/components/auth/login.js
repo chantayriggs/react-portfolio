@@ -59,7 +59,7 @@ export default class Login extends Component {
 
                 <form 
                 onSubmit={this.handleSubmit} 
-                className="auth-form-wrapper"
+                className="auth-form-wrapper"s
                 >
 
                 <div className="form-group" >

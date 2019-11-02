@@ -16,6 +16,8 @@ class Blog extends Component {
       isLoading: true,
       blogModalIsOpen: false
     };
+
+    window.addEventListener("scroll", this.onScroll, false);
   }
 
   handleDeleteClick = blog => {
@@ -53,6 +55,7 @@ class Blog extends Component {
   }
 
   onScroll = () => {
+    console.log(window.innerHeight + document.documentElement.scrollTop, "/", document.documentElement.offsetHeight)
     if (
       this.state.isLoading ||
       this.state.blogItems.length === this.state.totalCount
@@ -61,7 +64,7 @@ class Blog extends Component {
     }
 
     if (
-      window.innerHeight + document.documentElement.scrollTop ===
+      window.innerHeight + document.documentElement.scrollTop  >
       document.documentElement.offsetHeight
     ) {
       this.getBlogItems();
@@ -82,7 +85,7 @@ class Blog extends Component {
         }
       )
       .then(response => {
-        console.log("gettting", response.data);
+        console.log("getting", response.data);
         this.setState({
           blogItems: this.state.blogItems.concat(response.data.portfolio_blogs),
           totalCount: response.data.meta.total_records,

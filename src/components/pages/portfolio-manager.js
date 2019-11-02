@@ -85,7 +85,6 @@ export default class PortfolioManager extends Component {
             handleFormSubmissionError={this.handleFormSubmissionError}
             clearPortfolioToEdit={this.clearPortfolioToEdit}
             portfolioToEdit={this.state.portfolioToEdit}
-
           />
         </div>
 
